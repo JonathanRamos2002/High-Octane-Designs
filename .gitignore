@@ -1,0 +1,10 @@
+dist/
+.env
+.DS_Store
+*.log
+*.env
+
+setup/
+backend/node_modules/
+backend/.env
+frontend/node_modules/
