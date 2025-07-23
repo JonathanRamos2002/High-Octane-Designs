@@ -1,19 +1,21 @@
-import React from 'react'
-import {PlusIcon} from "lucide-react"
+import { Link } from "react-router";
+import { PlusIcon } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <header className="navbar bg-base-300 border-b border-base-300">
-      <div className="flex-1">
-        <a href="/" className="btn btn-ghost normal-case text-xl">High Octane Designs</a>
-      </div>
-      <div className="flex-none">
-        <ul className="menu menu-horizontal p-0">
-          <li><a href="/create"><PlusIcon className="inline-block mr-2" />Create Note</a></li>
-        </ul>
+    <header className="bg-base-300 border-b border-base-content/10">
+      <div className="mx-auto max-w-6xl p-4">
+        <div className="flex items-center justify-between">
+          <h1 className="text-3xl font-bold text-primary font-mono tracking-tight">High Octane Designs</h1>
+          <div className="flex items-center gap-4">
+            <Link to={"/create"} className="btn btn-primary">
+              <PlusIcon className="size-5" />
+              <span>New Note</span>
+            </Link>
+          </div>
+        </div>
       </div>
     </header>
-  )
-}
-
-export default Navbar
+  );
+};
+export default Navbar;

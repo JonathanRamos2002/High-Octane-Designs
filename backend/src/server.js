@@ -1,13 +1,21 @@
 import express from 'express';
+import dotenv from 'dotenv';
+import cors from 'cors';
+
+import rateLimiter from './middleware/rateLimiter.js'; // Import the rate limiter
 import notesRoutes from './routes/notesRoutes.js';
 import connectDB from './config/db.js';
-import dotenv from 'dotenv';
-import rateLimiter from './middleware/rateLimiter.js'; // Import the rate limiter
 
 
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Enable CORS
+app.use(cors({
+  origin: 'http://localhost:5173', // Adjust this to your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+}));
 
 // Simple custom logging middleware (common use case: authentication + rate limiting)
 // app.use((req, res, next) => {
