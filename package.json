@@ -1,0 +1,23 @@
+{
+  "name": "high-octane-designs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "cd backend && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanRamos2002/High-Octane-Designs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonathanRamos2002/High-Octane-Designs/issues"
+  },
+  "homepage": "https://github.com/JonathanRamos2002/High-Octane-Designs#readme"
+}
